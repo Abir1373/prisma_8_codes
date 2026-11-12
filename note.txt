@@ -43,4 +43,4 @@ pnpm add -D @types/express
 
 11 package.json => scripts => "dev": "tsx --watch src/main.ts"
 
-12. 
+12. pnpm dev
