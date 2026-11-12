@@ -1,0 +1,46 @@
+1.pnpm init
+
+Installation : 
+
+1. pnpm add @prisma/orm-postgres dotenv
+2. pnpm add -D prisma typescript tsx @types/node
+3. pnpm exec prisma orm init : 
+    i. PostgreSQL
+    ii. Prisma schema language
+    iii. src/prisma/contract.prisma
+    iv. .env
+
+4. write schema at contract.prisma
+5. Run commange : pnpm prisma contract emit
+6. Push schema to database : pnpm prisma db init 
+7. create main.ts under prisma folder
+8. express server
+
+
+9.write this inside main.js 
+
+import express, { Request, Response } from "express";
+
+const app = express();
+app.use(express.json());
+
+app.get("/", (_req: Request, res: Response) => {
+    res.send({
+        message: "Server is running"
+    });
+});
+
+app.listen(5000, () => {
+    console.log("Server running on port 5000");
+});
+
+
+10. install express 
+
+pnpm add express
+pnpm add -D @types/express
+
+
+11 package.json => scripts => "dev": "tsx --watch src/main.ts"
+
+12. 
